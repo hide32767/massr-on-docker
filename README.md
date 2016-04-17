@@ -8,6 +8,10 @@ via. https://github.com/tdtds/massr
 ## require
 
 - Docker environment
+- several rubygems installed
+ - rake
+ - serverspec
+ - docker-api
 
 ## notice
 
