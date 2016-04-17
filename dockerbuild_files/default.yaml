@@ -1,0 +1,7 @@
+---
+auth_twitter:
+  :id: YOUR_TWITTER_API_KEY
+  :secret: YOUR_TWITTER_API_SECRET
+Gmail:
+  mail: YOUR_GMAIL_ADDRESS
+  pass: YOUR_GMAIL_APP_PASSWORD

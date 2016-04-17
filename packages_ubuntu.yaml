@@ -1,0 +1,24 @@
+---
+
+- apt-utils
+- git
+- curl
+- bzip2
+- build-essential
+- patch
+- libreadline-dev
+- libssl-dev
+- libicu-dev
+- libyaml-dev
+- libxml2-dev
+- libxslt1-dev
+- liblzma-dev
+- zlib1g-dev
+- imagemagick
+- libmagickcore-dev
+- libmagickwand-dev
+- nodejs
+- memcached
+- mongodb-org
+
+...
