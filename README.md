@@ -44,5 +44,5 @@ $ rake spec
 run
 
 ```
-$ docker run -p 9393:9393 massr
+$ docker run -d massr
 ```

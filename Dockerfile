@@ -61,6 +61,8 @@ RUN bash -lc 'rbenv global 2.2.4'
 RUN bash -lc 'gem update --quiet'
 RUN bash -lc 'gem install bundler --quiet'
 
+#-------------------------------------------------------------------------------
+
 # creating user who execute web-app
 RUN groupadd webapp && useradd -g webapp -m -s /bin/dash webapp
 
@@ -69,8 +71,6 @@ RUN su - webapp -c 'mkdir -m 700 /home/webapp/.pit'
 ADD dockerbuild_files/default.yaml /home/webapp/.pit/
 ADD dockerbuild_files/pit.yaml /home/webapp/.pit/
 RUN chmod 600 /home/webapp/.pit/* ; chown webapp:webapp /home/webapp/.pit/*
-
-#-------------------------------------------------------------------------------
 
 # creating a directory for web-app
 RUN mkdir -m 755 /srv/webapp && chown webapp:webapp /srv/webapp
@@ -90,4 +90,5 @@ RUN su - webapp -c 'cd /srv/webapp && . ./.env; bundle install --path vendor/bun
 ADD dockerbuild_files/massr_boot.sh /srv/
 RUN chmod 700 /srv/massr_boot.sh
 
+EXPOSE 9393:9393
 ENTRYPOINT ["/srv/massr_boot.sh"]
