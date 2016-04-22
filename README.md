@@ -2,7 +2,7 @@
 
 ## overview
 
-Dockerfile and spec for Massr, with 'development' environment.
+Dockerfile and spec for Massr, with 'development' environment.  
 via. https://github.com/tdtds/massr
 
 ## require
@@ -18,7 +18,7 @@ via. https://github.com/tdtds/massr
 - It shall build the docker image by this Dockerfile, include MongoDB in the image.
   So when the docker container was stopped, all data of MongoDB shall be lost.
   If you want to save data of MongoDB, you should do 'docker commit' before you stop the docker container.
-- If your Docker environment is provided `docker-machine`, you should access your docker-machine IP address.
+- If your Docker environment is provided by `docker-machine`, you should use your docker-machine IP address for accessing Massr.
 
 ## usage
 
@@ -44,5 +44,5 @@ $ rake spec
 run
 
 ```
-$ docker run -p 9393:9393 massr /bin/bash -c '/srv/massr_boot.sh'
+$ docker run -p 9393:9393 massr
 ```
